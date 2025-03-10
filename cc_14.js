@@ -50,3 +50,29 @@ function highlightHighPriorityTickets() { // highlights high priority tickets
         }
     });
 }
+
+//TASK 5
+
+function enableInlineEditing(ticket) { // enables inline editing for a ticket
+    ticket.addEventListener('dblclick', function() { // adds event listener for double click
+        const nameHeading = ticket.querySelector('h3'); 
+        const issueParagraph = ticket.querySelector('p'); 
+        const priorityLabel = ticket.querySelector('label');
+
+        // replaces text with input fields
+        nameHeading.innerHTML = `<input type="text" value="${nameHeading.textContent}">`;
+        issueParagraph.innerHTML = `<input type="text" value="${issueParagraph.textContent}">`;
+        priorityLabel.innerHTML = `<input type="text" value="${priorityLabel.textContent}">`;
+
+        const saveButton = document.createElement('button'); // creates a save button
+        saveButton.textContent = 'Save'; 
+        saveButton.addEventListener('click', function() { // adds event listener to save button
+            nameHeading.textContent = nameHeading.querySelector('input').value; 
+            issueParagraph.textContent = issueParagraph.querySelector('input').value; 
+            priorityLabel.textContent = priorityLabel.querySelector('input').value; 
+            ticket.removeChild(saveButton); // removes the save button after updating
+        });
+
+        ticket.appendChild(saveButton); // appends the save button to the ticket
+    });
+}
