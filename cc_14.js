@@ -73,6 +73,11 @@ function enableInlineEditing(ticket) { // enables inline editing for a ticket
         const issueParagraph = ticket.querySelector('p'); 
         const priorityLabel = ticket.querySelector('label');
 
+        const existingSaveButton = ticket.querySelector('button');
+        if (existingSaveButton) {
+            existingSaveButton.remove(); // removes the existing save button before adding a new one
+        }
+
         // replaces text with input fields
         nameHeading.innerHTML = `<input type="text" value="${nameHeading.textContent}">`;
         issueParagraph.innerHTML = `<input type="text" value="${issueParagraph.textContent}">`;
