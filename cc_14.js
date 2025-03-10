@@ -10,6 +10,8 @@ function addTicket(name, issue, priority) { // creates a support ticket
     const ticket = document.createElement('div'); // creates a div for the ticket
     ticket.classList.add('ticket'); // adds a class to the ticket
 
+    console.log(`Ticket added: ${name}, ${issue}, Priority: ${priority}`);
+
     const nameHeading = document.createElement('h3'); // creates the heading for the customer’s name
     nameHeading.textContent = name; 
 
