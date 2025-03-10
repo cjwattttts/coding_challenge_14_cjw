@@ -55,8 +55,12 @@ function highlightHighPriorityTickets() { // highlights high priority tickets
 
     ticketsArray.forEach(ticket => { // loops through each ticket
         const priorityLabel = ticket.querySelector('label'); // selects the priority label of each ticket
-        if (priorityLabel && priorityLabel.textContent.trim() === 'Priority: High') { // checks to see if priority is 'High' 
-        ticket.style.backgroundColor = 'red'; // highlights high priority tickets in red 
+        const priorityText = priorityLabel.textContent.trim();
+        
+        if (priorityText === 'Priority: High') { // checks to see if priority is 'High' 
+            ticket.style.backgroundColor = 'red'; // highlights high priority tickets in red 
+        } else {
+            ticket.style.backgroundColor = ''; // removes any background color if not 'High'
         }
     });
 }
