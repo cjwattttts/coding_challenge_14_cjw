@@ -1,6 +1,11 @@
 //TASK 2, 4
 
 const ticketContainer = document.getElementById('ticketContainer'); // selects the ticket container
+const addTicketBtn = document.getElementById('addTicketBtn'); // selects the add ticket button
+
+addTicketBtn.addEventListener('click', function() { 
+    addTicket("John Doe", "Cannot access account", "High"); // adds a test ticket
+});
 
 ticketContainer.addEventListener('click', function() { // adds event listener to the ticket container
     console.log('Ticket clicked'); 
