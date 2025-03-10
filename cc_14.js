@@ -31,3 +31,15 @@ function addTicket(name, issue, priority) { // creates a support ticket
     ticketContainer.appendChild(ticket); // appends the ticket to the container
 }
 
+//TASK 3
+function highlightHighPriorityTickets() { // highlights high priority tickets
+    const highPriorityTickets = document.querySelectorAll('.ticket'); // selects all tickets
+    const ticketsArray = Array.from(highPriorityTickets); // converts nodelist to array
+
+    ticketsArray.forEach(ticket => { // loops through each ticket
+        const priorityLabel = ticket.querySelector('label'); // selects the priority label of each ticket
+        if (priorityLabel && priorityLabel.textContent.includes('High')) { // checks if priority is high
+            ticket.style.backgroundColor = 'red'; // highlights high priority tickets in red
+        }
+    });
+}
