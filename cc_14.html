@@ -4,73 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Support Ticket System</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        header, footer {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        main {
-            padding: 20px;
-        }
-        .ticket {
-            border: 1px solid #ccc;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #f9f9f9;
-        }
-        .high-priority {
-            background-color: #ff6666;
-        }
-        .resolve-button {
-            background-color: green;
-            color: white;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .resolve-button:hover {
-            background-color: darkgreen;
-        }
-        input, select, button {
-            margin: 5px;
-            padding: 10px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Customer Support Ticket System</h1> <!-- title of the page -->
+        <h1>Customer Support Ticket System</h1>
     </header>
 
     <main>
-        <div>
-            <h2>Create a New Ticket</h2> <!-- title for creating a new ticket -->
-            <input type="text" id="ticketName" placeholder="Customer Name" required /> <!-- input for customer name -->
-            <input type="text" id="ticketIssue" placeholder="Issue" required /> <!-- input for issue description -->
-            <select id="ticketPriority"> <!-- dropdown for selecting priority -->
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
-            <button id="addTicketButton">Add Ticket</button> <!-- button to add ticket -->
-        </div>
-
-        <h2>Support Tickets</h2> <!-- section for listing support tickets -->
-        <div id="ticketContainer"></div> <!-- container for support tickets -->
+        <button id="addTicketBtn">Add Support Ticket</button>
+        <div id="ticketContainer"></div>
     </main>
 
     <footer>
-        <p>Customer Support System</p> <!-- footer content -->
+        <p>Customer Support System</p>
     </footer>
 
-    <script src="cc_14.js"></script> <!-- link to javascript file -->
+    <script src="cc_14.js"></script>
 </body>
 </html>
