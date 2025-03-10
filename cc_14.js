@@ -4,7 +4,7 @@ const ticketContainer = document.getElementById('ticketContainer'); // selects t
 const addTicketBtn = document.getElementById('addTicketBtn'); // selects the add ticket button
 
 addTicketBtn.addEventListener('click', function() { 
-    addTicket("John Doe", "Cannot access account", "High"); // adds a test ticket
+    addTicket("Cam Watts", "New issue description here", "High"); // adds a test ticket
 });
 
 ticketContainer.addEventListener('click', function() { // adds event listener to the ticket container
@@ -43,6 +43,9 @@ function addTicket(name, issue, priority) { // creates a support ticket
 
     const ticketContainer = document.getElementById('ticketContainer'); // selects the ticket container
     ticketContainer.appendChild(ticket); // appends the ticket to the container
+
+    highlightHighPriorityTickets(); // highlights high priority tickets
+    enableInlineEditing(ticket); // enables inline editing for the newly added ticket
 }
 
 //TASK 3
