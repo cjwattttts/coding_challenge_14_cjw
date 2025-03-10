@@ -19,14 +19,14 @@ function addTicket(name, issue, priority) { // creates a support ticket
     issueParagraph.textContent = issue; 
 
     const priorityLabel = document.createElement('label'); // creates label for priority level
-    priorityLabel.textContent = `Priority: ${priority}`; // sets priority level
+    priorityLabel.textContent = `Priority: ${priority}`; // sets the priority level
 
     const resolveButton = document.createElement('button'); // creates the resolve button
     resolveButton.textContent = 'Resolve'; 
     resolveButton.classList.add('resolve-button'); // adds a class for styling
 
     resolveButton.addEventListener('click', function(event) { // adds event listener (click) to resolve button
-        event.stopPropagation(); // stops event from bubbling
+        event.stopPropagation(); // stops the event from bubbling
         ticket.remove(); // removes the ticket from the DOM
     });
 
@@ -47,7 +47,7 @@ function highlightHighPriorityTickets() { // highlights high priority tickets
 
     ticketsArray.forEach(ticket => { // loops through each ticket
         const priorityLabel = ticket.querySelector('label'); // selects the priority label of each ticket
-        if (priorityLabel && priorityLabel.textContent.includes('High')) { // checks if priority is high
+        if (priorityLabel && priorityLabel.textContent.includes('High')) { // checks to see if priority is high
             ticket.style.backgroundColor = 'red'; // highlights high priority tickets in red
         }
     });
