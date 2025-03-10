@@ -81,6 +81,8 @@ function enableInlineEditing(ticket) { // enables inline editing for a ticket
             issueParagraph.textContent = issueParagraph.querySelector('input').value; 
             priorityLabel.textContent = priorityLabel.querySelector('input').value; 
             ticket.removeChild(saveButton); // removes the save button after updating
+
+            highlightHighPriorityTickets();
         });
 
         ticket.appendChild(saveButton); // appends the save button to the ticket
