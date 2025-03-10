@@ -1,4 +1,11 @@
-//TASK 2
+//TASK 2, 4
+
+const ticketContainer = document.getElementById('ticketContainer'); // selects the ticket container
+
+ticketContainer.addEventListener('click', function() { // adds event listener to the ticket container
+    console.log('Ticket clicked'); 
+});
+
 function addTicket(name, issue, priority) { // creates a support ticket
     const ticket = document.createElement('div'); // creates a div for the ticket
     ticket.classList.add('ticket'); // adds a class to the ticket
